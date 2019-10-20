@@ -10,6 +10,10 @@
     "appId": "uzee.screenshare.test",
     "win": {
       "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
     }
   },
   "repository": "https://github.com/electron/electron-quick-start",
