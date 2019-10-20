@@ -6,6 +6,12 @@
   "scripts": {
     "start": "electron ."
   },
+  "build": {
+    "appId": "uzee.screenshare.test",
+    "win": {
+      "target": "nsis"
+    }
+  },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
     "Electron",
@@ -17,6 +23,7 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^6.0.12"
+    "electron": "^6.0.12",
+    "electron-builder": "^21.2.0"
   }
 }
