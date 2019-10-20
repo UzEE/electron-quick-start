@@ -9,9 +9,10 @@ let mainWindow
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1280,
+    height: 900,
     webPreferences: {
+      webSecurity: false,
       preload: path.join(__dirname, 'preload.js')
     }
   })
@@ -29,6 +30,10 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+
+  devtools = new BrowserWindow()
+  mainWindow.webContents.setDevToolsWebContents(devtools.webContents)
+  mainWindow.webContents.openDevTools({ mode: 'detach' })
 }
 
 // This method will be called when Electron has finished
