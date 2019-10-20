@@ -26,6 +26,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
       setSelectOptions(srcObj);
       console.log(srcObj);
+
+      showCapture(sources[0].id);
     });
 
   const select = document.getElementById('sourcesSelect');
